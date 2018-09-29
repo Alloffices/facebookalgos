@@ -39,8 +39,7 @@
           // Variable checks DOM for Zipzodes in zips array
           var countsNum = $('body > div:contains("'+zips[i]+'")').length > 0;
           if (countsNum) {
-            // alert(zips[i]);
-            // console.log(locationNames);
+            // Will switch between each zips[i] condition to check which one is true
             switch (zips[i]) {
               case '33496':
                 alert('Boca Raton');
@@ -93,13 +92,15 @@
           };
         } else {
           // Will alert that the page does not contain company zipcodes
-          console.log('Zipcode Does Not Exist');
+          alert("Zipcode Does Not Exist - Is there anything else you'd like?");
         }
       }
     }
-
-    // Executes the main function to search location zips and locations
-    findSomething();
+    // Checks slug to contain = order/datetime.aspx?
+    if(true) {
+      // Executes the main function to search location zips and locations
+      findSomething();
+    };
   });
 </script>
 
@@ -225,7 +226,7 @@
                           <div><b>Bolay - Boca Raton</b></div>
                           <div>5030 Champion Blvd</div>
                           <div>Suite G1D</div>
-                          <div>Boca Raton, FL&nbsp;&nbsp;33496</div>
+                          <div>Boca Raton, FL&nbsp;&nbsp;33409</div>
                           <div>Phone: (561) 609-1781</div>
                         </td>
                         <td id="ctl00_cph1_tdChangeLocation" style="padding-left: 40px;">
