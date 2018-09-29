@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="ttp://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_17-WwLeh" />
+  <link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_32-WwLeh" />
+  <link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_18-WwLeh" />
+  <link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_16-WwLeh" />
+  <title>
+    Order Online - Select Date & Time
+  </title>
+  <!-- <meta name="robots" content="noindex" /> -->
+  <link href="../App_Themes/default/layout.css" type="text/css" rel="stylesheet" />
+  <link href="../App_Themes/default/style.css" type="text/css" rel="stylesheet" />
+<!--   <link rel="stylesheet" href="../cache/f1c0342a-684a-40c2-a463-9f00223bde56/5cbd713a-f323-4276-ac2f-e12d60aee6fa.css" type="text/css" /> -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--  Facebook  Pixel  Code  -->  <script>      !function(f,b,e,v,n,t,s)     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?    n.callMethod.apply(n,arguments):n.queue.push(arguments)};    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';    n.queue=[];t=b.createElement(e);t.async=!0;    t.src=v;s=b.getElementsByTagName(e)[0];    s.parentNode.insertBefore(t,s)}(window, document,'script',      'https://connect.facebook.net/en_US/fbevents.js');      fbq('init',  '1737034453224224');      fbq('track',  'PageView');  </script>  <noscript><img  height="1"  width="1"  style="display:none"      src="https://www.facebook.com/tr?id=1737034453224224&ev=PageView&noscript=1"  /></noscript>  <!--  End  Facebook  Pixel  Code  -->
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    let zips = [
+                '32608', 
+                '32832',
+                '33403',
+                '33026',
+                '33496', 
+                '33414',
+                '33409'
+    ];
+    function findSomething() {
+      for (var i=0; i<zips.length;i++) {
+        if (zips[i]) {
+          // Variable checks DOM for Zipzodes in zips array
+          var countsNum = $('body > div:contains("'+zips[i]+'")').length > 0;
+          if (countsNum) {
+            // alert(zips[i]);
+            // console.log(locationNames);
+            switch (zips[i]) {
+              case '33496':
+                alert('Boca Raton');
+                fbq('track',  'ViewContent',  {
+                  content_name:  'Boca Raton',}
+                ); 
+                break;
+              case '32608':
+                alert('Gainesville');
+                fbq('track',  'ViewContent',  {
+                  content_name:  'Gainesville'}
+                ); 
+                break;
+              case '32832':
+                alert('Lake Nona');
+                fbq('track',  'ViewContent',  {
+                  content_name:  'Lake Nona'}
+                ); 
+                break;
+              case '33403':
+                alert('Northlake/PGA');
+                fbq('track',  'ViewContent',  {
+                  content_name:  'Northlake/PGA'}
+                ); 
+                break;
+              case '33026':
+                alert('Pembroke Pines');
+                fbq('track',  'ViewContent',  {
+                  content_name:  'Pembroke Pines'}
+                ); 
+                break;
+              case '33414':
+                alert('Wellington');
+                fbq('track',  'ViewContent',  {
+                  content_name:  'Wellington'}
+                ); 
+                break;
+              case '33409':
+                alert('West Palm Beach');
+                fbq('track',  'ViewContent',  {
+                  content_name:  'West Palm Beach'}
+                ); 
+                break;
+              default:
+                console.log('The location you are looking for is not in our system');
+            }
+            alert("Is there anything else you'd like?");
+            // Once a valid zip code is found we break
+            break;
+          };
+        } else {
+          // Will alert that the page does not contain company zipcodes
+          console.log('Zipcode Does Not Exist');
+        }
+      }
+    }
+
+    // Executes the main function to search location zips and locations
+    findSomething();
+  });
+</script>
+
+
+
+</head>
+
+<body>
+  <div>
+    <form name="aspnetForm" method="post" action="./datetime.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+      <div>
+        <input type="hidden" name="ctl00_sm1_HiddenField" id="ctl00_sm1_HiddenField" value="" />
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"
+        />
+      </div>
+
+      <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['aspnetForm'];
+        if (!theForm) {
+          theForm = document.aspnetForm;
+        }
+
+        function __doPostBack(eventTarget, eventArgument) {
+          if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+            theForm.__EVENTTARGET.value = eventTarget;
+            theForm.__EVENTARGUMENT.value = eventArgument;
+            theForm.submit();
+          }
+        }
+        //]]>
+      </script>
+
+      <script src="/WebResource.axd?d=7Mg-AT9EUVee5-R4C3ig04Z50BGh-tgRO4g1Vmgo2dIlx900wZ-akfUdLUXk7ud2dh2Quw-sz-75lZ77PkMzyZKQDC1ncSERRyDwcrdI3XY1&amp;t=636686402738678653" type="text/javascript"></script>
+
+      <script src="../resources/js/library.js?v=4.1.5180" type="text/javascript"></script>
+      <script src="../resources/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+      <script src="../resources/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+      <script language='javascript' type='text/javascript'>
+        var applicationPath = '/';
+      </script>
+      <script src="/ScriptResource.axd?d=aOpzeE4cq9i4Fu8lrbmB9qTqGyquSKZWi3h9PPMF_rRsjuF2aoW4SUsFPLdjwYhjZsBIuiciCgX19fY7Kd-xeOK6Rw1lRA3--bC0UzR_jeQTwD_ERaXVn7IF9uIkOfpm3qAzZgUii7r-hlyhO8WOYraGfqxXOnOlg-L0KQpYHYg1&amp;t=ffffffffab5b37cd" type="text/javascript"></script>
+      <script src="/ScriptResource.axd?d=nkYmGikv6DvCmv-w0QzWGc07NQsf6xtRo6Tbl0OK0YseeKL9ohSNuKp1ovi33Qcy8gEem2-kgTviHQbWlnaS28WSUjhnlLlLiwz2vtKGDqWPeSWwWTTvwElV44Suqho2AOE3Naf-WIb2YNUCHuKz_GhHIbajxiPjFK_GlSa9r-I1&amp;t=545ba255" type="text/javascript"></script>
+      <script src="/ScriptResource.axd?d=uVaEeSkC3VM4edHEcr__FAjqs1Bg3C7EsHYbNIlcacVkEpVD3drdCpTCarpojtu0WEb0rECUUtHbpMXQEcF269yU3MBcyJhJ70dfZwMaxcaikdQQPhFdCwUJ6Eme3E_UrqJ1r4yzhVIoV7wqGnLtGlfNVmg6svl_DfGALEtSDW4agHYMWMA8Pm6qS_Z0k6360&amp;t=545ba255" type="text/javascript"></script>
+      <script type="text/javascript">
+        //<![CDATA[
+        function WebForm_OnSubmit() {
+          if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+          return true;
+        }
+        //]]>
+      </script>
+
+      <div>
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B3A055E4" />
+        <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+      </div>
+
+      <div class="container-outer">
+        <div class="container-inner">
+
+          <div style="height: 200px; background-color: #fff; width: 100%;">
+            <div style="width: 1059px; margin: auto; height: 200px;">
+              <img src="https://d1b7mian324x1s.cloudfront.net/skins/cp/eatbolay/header2.jpg" width="1059" height="200" alt="" border="0" usemap="#map" />
+            </div>
+          </div>
+
+          <map name="map">
+                <area shape="circle" coords="122,100,94" alt="eatbolay.com" href="https://bolay.com/" />
+                <area shape="rect" coords="236,75,310,122" alt="eatbolay.com" href="https://bolay.com/" />
+                <area shape="rect" coords="350,73,478,125" alt="Menu" href="https://bolay.com/menu/" />
+             <area shape="rect" coords="516,71,628,125" alt="Contact Us" href="https://bolay.com/contact-2/" /> 
+                <area shape="rect" coords="661,71,801,127" alt="Locations" href="https://bolay.com/locations/" />
+                <area shape="rect" coords="836,76,1006,123" alt="Order Online" href="https://eatbolay.brinkpos.net" />
+            </map>
+
+          <div style="background: url(https://d1b7mian324x1s.cloudfront.net/skins/cp/eatbolay/BANNER.jpg); height: 170px; background-size: cover; background-position: center center; margin-top: 10px;">
+          </div>
+
+          <div style="width: 1057px; margin: 0px auto; background-color: #fff; border: solid 0px #fff; margin-top: 0px;">
+            <div style="margin: 40px;">
+
+              <div class="container-main">
+                <div class="main-nav">
+                  <span id="ctl00_lblWelcome" class="welcome"></span>
+                  <span id="ctl00_spanOrder" class="order-online"><a href="./" id="ctl00_lnkOrder">Order Online</a> | </span>
+                  <span id="ctl00_spanSignIn"><a href="../" id="ctl00_lnkSignIn">Sign In</a></span>
+                  <span id="ctl00_spanCreateAccount"> | <a href="../CreateAccount.aspx" id="ctl00_lnkCreateAccount">New Account</a></span>
+
+                </div>
+
+                <h1 class="order-online date-time"><span>Order Online</span></h1>
+
+                <div class="section-outer date-time">
+
+
+
+
+
+
+
+
+
+
+
+                  <div class="section-inner">
+
+                    <h2 class="date-time"><span>Select Date & Time</span></h2>
+
+                    <div id="ctl00_cph1_mc1_upnl1">
+
+                    </div>
+
+                    <div id="ctl00_cph1_vs1" class="validation-summary" style="color:Red;display:none;"></div>
+
+                    <table>
+                      <tr valign="top">
+                        <td>
+                          <div><b>Bolay - Boca Raton</b></div>
+                          <div>5030 Champion Blvd</div>
+                          <div>Suite G1D</div>
+                          <div>Boca Raton, FL&nbsp;&nbsp;33496</div>
+                          <div>Phone: (561) 609-1781</div>
+                        </td>
+                        <td id="ctl00_cph1_tdChangeLocation" style="padding-left: 40px;">
+                          <a href="default.aspx?edit=1">Change Location</a>
+                        </td>
+
+                        <td style="padding-left: 40px;">
+                          <div><b>Hours of Operation:</b></div>
+                          <div class="hours">
+                            <div>Sun: 11:00 AM - 9:00 PM</div>
+                            <div>Mon: 11:00 AM - 9:30 PM</div>
+                            <div>Tue: 11:00 AM - 9:30 PM</div>
+                            <div>Wed: 11:00 AM - 9:30 PM</div>
+                            <div>Thu: 11:00 AM - 9:30 PM</div>
+                            <div>Fri: 11:00 AM - 9:30 PM</div>
+                            <div>Sat: 11:00 AM - 9:30 PM</div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <div id="ctl00_cph1_upnl1">
+
+                      <table>
+                        <tr>
+                          <td colspan="3">
+                            <div class="sep"></div>
+                          </td>
+                        </tr>
+                        <div id="ctl00_cph1_pnlDestination">
+
+                          <tr>
+                            <td colspan="3">
+                              <div><b>Please choose one of the following:</b>
+                                <span id="ctl00_cph1_reqDestination" style="color:Red;display:none;"> !</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="label"></td>
+                            <td colspan="2">
+                              <table id="ctl00_cph1_rbDestination" border="0">
+                                <tr>
+                                  <td><input id="ctl00_cph1_rbDestination_0" type="radio" name="ctl00$cph1$rbDestination" value="209232" checked="checked" /><label for="ctl00_cph1_rbDestination_0">Take Out</label></td>
+                                </tr>
+                                <tr>
+                                  <td><input id="ctl00_cph1_rbDestination_1" type="radio" name="ctl00$cph1$rbDestination" value="212823" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cph1$rbDestination$1\&#39;,\&#39;\&#39;)&#39;, 0)" />
+                                    <label
+                                      for="ctl00_cph1_rbDestination_1">Dine In</label>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="3">
+                              <div class="sep"></div>
+                            </td>
+                          </tr>
+
+                        </div>
+
+                        <tr class="order-date">
+                          <td class="label"><span class="required">*</span> Date:</td>
+                          <td>
+                            <script id="dxis_1522103623" src="/DXR.axd?r=1_225-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_500043608" src="/DXR.axd?r=1_130-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_710220333" src="/DXR.axd?r=1_218-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_1554617311" src="/DXR.axd?r=1_164-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_275426196" src="/DXR.axd?r=1_127-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_881286121" src="/DXR.axd?r=1_162-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_500178900" src="/DXR.axd?r=1_170-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_1554374468" src="/DXR.axd?r=1_134-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_1379984635" src="/DXR.axd?r=1_175-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_325761326" src="/DXR.axd?r=1_161-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_500286451" src="/DXR.axd?r=1_160-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_813778347" src="/DXR.axd?r=1_210-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_710112526" src="/DXR.axd?r=1_208-WwLeh" type="text/javascript"></script>
+                            <script id="dxis_881106700" src="/DXR.axd?r=1_152-WwLeh" type="text/javascript"></script>
+                            <script id="dxss_684010798" type="text/javascript">
+                              <!--
+                              (function() {
+                                var a = ({
+                                  'numNegInf': '-∞',
+                                  'numPosInf': '∞'
+                                });
+                                for (var b in a) ASPx.CultureInfo[b] = a[b];
+                              })();
+                              //-->
+                            </script>
+                            <table class="dxeButtonEditSys dxeButtonEdit DateEdit" cellspacing="1" cellpadding="0" id="ctl00_cph1_txtDate" border="0" style="width:130px;">
+                              <tr>
+                                <td class="dxic" onmousedown="return ASPx.DDMC_MD(&#39;ctl00_cph1_txtDate&#39;, event)" style="width:100%;"><input class="dxeEditArea dxeEditAreaSys" id="ctl00_cph1_txtDate_I" name="ctl00$cph1$txtDate" onfocus="ASPx.EGotFocus(&#39;ctl00_cph1_txtDate&#39;)" onblur="ASPx.ELostFocus(&#39;ctl00_cph1_txtDate&#39;)" onchange="ASPx.ETextChanged(&#39;ctl00_cph1_txtDate&#39;)"
+                                    value="9/29/2018" type="text" /></td>
+                                <td id="ctl00_cph1_txtDate_B0" class="dxeButton dxeButtonEditButton" onclick="ASPx.BEClick(&#39;ctl00_cph1_txtDate&#39;,0)" onmousedown="return ASPx.DDDropDown(&#39;ctl00_cph1_txtDate&#39;, event)"
+                                  style="-khtml-user-select:none;"><img id="ctl00_cph1_txtDate_B0Img" src="../resources/images/calendar.png" alt="v" /></td>
+                              </tr>
+                            </table>
+                            <div id="ctl00_cph1_txtDate_DDD_PW-1" class="dxpcDropDown dxpclW dxpc-ddSys" style="width:0px;cursor:default;z-index:10000;display:none;visibility:hidden;">
+                              <div class="dxpc-mainDiv">
+                                <div class="dxpc-contentWrapper">
+                                  <div class="dxpc-content">
+                                    <table border="0" style="display:none;">
+                                      <tr>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_D" class="dxeCalendarDay"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_DS" class="dxeCalendarSelected"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_DA" class="dxeCalendarOtherMonth"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_DW" class="dxeCalendarWeekend"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_DO" class="dxeCalendarOutOfRange"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_DDD" class="dxeCalendarDayDisabled"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_DT" class="dxeCalendarToday"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_DD" class="dxeDisabled"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_FNM" class="dxeCalendarFastNavMonth"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_FNMS" class="dxeCalendarFastNavMonthSelected"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_FNY" class="dxeCalendarFastNavYear"></td>
+                                        <td id="ctl00_cph1_txtDate_DDD_C_EC_FNYS" class="dxeCalendarFastNavYearSelected"></td>
+                                      </tr>
+                                    </table>
+                                    <table class="dxeCalendar" cellspacing="0" cellpadding="0" id="ctl00_cph1_txtDate_DDD_C" border="0" style="border-collapse:collapse;">
+                                      <tr>
+                                        <td valign="top">
+                                          <table cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+                                            <tr>
+                                              <td class="dxeCalendarHeader" style="border-top:0;">
+                                                <table cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+                                                  <tr>
+                                                    <td id="ctl00_cph1_txtDate_DDD_C_PYC" class="dxe" onclick="ASPx.CalShiftMonth(&#39;ctl00_cph1_txtDate_DDD_C&#39;, -12);"><img id="ctl00_cph1_txtDate_DDD_C_PYCImg" class="dxEditors_edtCalendarPrevYear" src="/DXR.axd?r=1_36-WwLeh" alt="&lt;&lt;" /></td>
+                                                    <td class="dxeCHS"></td>
+                                                    <td id="ctl00_cph1_txtDate_DDD_C_PMC" class="dxe" onclick="ASPx.CalShiftMonth(&#39;ctl00_cph1_txtDate_DDD_C&#39;, -1);"><img id="ctl00_cph1_txtDate_DDD_C_PMCImg" class="dxEditors_edtCalendarPrevMonth" src="/DXR.axd?r=1_36-WwLeh" alt="&lt;" /></td>
+                                                    <td id="ctl00_cph1_txtDate_DDD_C_TC" class="dxe" style="width:100%;cursor:default;"><span id="ctl00_cph1_txtDate_DDD_C_T" onclick="ASPx.CalTitleClick(&#39;ctl00_cph1_txtDate_DDD_C&#39;, 0, 0)" style="cursor:pointer;">September 2018</span></td>
+                                                    <td id="ctl00_cph1_txtDate_DDD_C_NMC" class="dxe"
+                                                      onclick="ASPx.CalShiftMonth(&#39;ctl00_cph1_txtDate_DDD_C&#39;, 1);"><img id="ctl00_cph1_txtDate_DDD_C_NMCImg" class="dxEditors_edtCalendarNextMonth" src="/DXR.axd?r=1_36-WwLeh" alt=">" /></td>
+                                                    <td class="dxeCHS"></td>
+                                                    <td id="ctl00_cph1_txtDate_DDD_C_NYC" class="dxe" onclick="ASPx.CalShiftMonth(&#39;ctl00_cph1_txtDate_DDD_C&#39;, 12);"><img id="ctl00_cph1_txtDate_DDD_C_NYCImg" class="dxEditors_edtCalendarNextYear" src="/DXR.axd?r=1_36-WwLeh" alt=">>" /></td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td id="ctl00_cph1_txtDate_DDD_C_mc" class="dxMonthGridWithWeekNumbers" style="-khtml-user-select:none;">
+                                                <table id="ctl00_cph1_txtDate_DDD_C_mt" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+                                                  <tr align="center">
+                                                    <td></td>
+                                                    <td class="dxeCalendarDayHeader">Sun</td>
+                                                    <td class="dxeCalendarDayHeader">Mon</td>
+                                                    <td class="dxeCalendarDayHeader">Tue</td>
+                                                    <td class="dxeCalendarDayHeader">Wed</td>
+                                                    <td class="dxeCalendarDayHeader">Thu</td>
+                                                    <td class="dxeCalendarDayHeader">Fri</td>
+                                                    <td class="dxeCalendarDayHeader">Sat</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarWeekNumber">35</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOtherMonth dxeCalendarOutOfRange">26</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth dxeCalendarOutOfRange">27</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth dxeCalendarOutOfRange">28</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth dxeCalendarOutOfRange">29</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth dxeCalendarOutOfRange">30</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth dxeCalendarOutOfRange">31</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">1</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarWeekNumber">36</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">2</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">3</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">4</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">5</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">6</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">7</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">8</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarWeekNumber">37</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">9</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">10</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">11</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">12</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">13</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">14</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">15</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarWeekNumber">38</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">16</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">17</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">18</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">19</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">20</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">21</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">22</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarWeekNumber">39</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOutOfRange">23</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">24</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">25</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">26</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">27</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOutOfRange">28</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarToday">29</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarWeekNumber">40</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend">30</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth">1</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth">2</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth">3</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth">4</td>
+                                                    <td class="dxeCalendarDay dxeCalendarOtherMonth">5</td>
+                                                    <td class="dxeCalendarDay dxeCalendarWeekend dxeCalendarOtherMonth">6</td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="dxeCalendarFooter" align="center">
+                                          <table cellpadding="0" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                              <td id="ctl00_cph1_txtDate_DDD_C_BT" class="dxeCalendarButton" onclick="ASPx.CalTodayClick(&#39;ctl00_cph1_txtDate_DDD_C&#39;);">Today</td>
+                                              <td class="dxeCFS"></td>
+                                              <td id="ctl00_cph1_txtDate_DDD_C_BC" class="dxeCalendarButton" onclick="ASPx.CalClearClick(&#39;ctl00_cph1_txtDate_DDD_C&#39;);">Clear</td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <div id="ctl00_cph1_txtDate_DDD_C_FNP_PW-1" class="dxpcDropDown dxpclW dxpc-ddSys" style="width:0px;cursor:default;z-index:10000;display:none;visibility:hidden;">
+                                      <div class="dxpc-mainDiv">
+                                        <div class="dxpc-contentWrapper">
+                                          <div class="dxpc-content">
+                                            <div class="dxeCalendarFastNav">
+                                              <div class="dxeCalendarFastNavMonthArea">
+                                                <table id="ctl00_cph1_txtDate_DDD_C_FNP_m" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+                                                  <tr>
+                                                    <td class="dxeCalendarFastNavMonth">Jan</td>
+                                                    <td class="dxeCalendarFastNavMonth">Feb</td>
+                                                    <td class="dxeCalendarFastNavMonth">Mar</td>
+                                                    <td class="dxeCalendarFastNavMonth">Apr</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarFastNavMonth">May</td>
+                                                    <td class="dxeCalendarFastNavMonth">Jun</td>
+                                                    <td class="dxeCalendarFastNavMonth">Jul</td>
+                                                    <td class="dxeCalendarFastNavMonth">Aug</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarFastNavMonth">Sep</td>
+                                                    <td class="dxeCalendarFastNavMonth">Oct</td>
+                                                    <td class="dxeCalendarFastNavMonth">Nov</td>
+                                                    <td class="dxeCalendarFastNavMonth">Dec</td>
+                                                  </tr>
+                                                </table>
+                                              </div>
+                                              <div class="dxeCalendarFastNavYearArea">
+                                                <table id="ctl00_cph1_txtDate_DDD_C_FNP_y" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+                                                  <tr>
+                                                    <td onclick="ASPx.CalFNYShuffle(&#39;ctl00_cph1_txtDate_DDD_C&#39;, -10)" rowspan="2" style="cursor:pointer;"><img class="dxEditors_edtCalendarFNPrevYear" src="/DXR.axd?r=1_36-WwLeh" alt="&lt;" /></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td onclick="ASPx.CalFNYShuffle(&#39;ctl00_cph1_txtDate_DDD_C&#39;, 10)" rowspan="2" style="cursor:pointer;"><img class="dxEditors_edtCalendarFNNextYear" src="/DXR.axd?r=1_36-WwLeh" alt=">" /></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                    <td class="dxeCalendarFastNavYear"></td>
+                                                  </tr>
+                                                </table>
+                                              </div>
+                                            </div>
+                                            <div class="dxeCalendarFastNavFooter" align="center">
+                                              <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+                                                <tr>
+                                                  <td id="ctl00_cph1_txtDate_DDD_C_FNP_BO" class="dxeCalendarButton" onclick="ASPx.CalFNBClick(&#39;ctl00_cph1_txtDate_DDD_C&#39;, &#39;ok&#39;)">OK</td>
+                                                  <td class="dxeCFNFS"></td>
+                                                  <td id="ctl00_cph1_txtDate_DDD_C_FNP_BC" class="dxeCalendarButton" onclick="ASPx.CalFNBClick(&#39;ctl00_cph1_txtDate_DDD_C&#39;, &#39;cancel&#39;)">Cancel</td>
+                                                </tr>
+                                              </table>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <script id="dxss_2117347050" type="text/javascript">
+                                      <!--
+                                      ASPx.AddHoverItems('ctl00_cph1_txtDate_DDD_C_FNP', [
+                                        [
+                                          ['dxpc-closeBtnHover'],
+                                          [''],
+                                          ['HCB-1']
+                                        ]
+                                      ]);
+                                      var dxo = new ASPxClientPopupControl('ctl00_cph1_txtDate_DDD_C_FNP');
+                                      window['ctl00_cph1_txtDate_DDD_C_FNP'] = dxo;
+                                      dxo.uniqueID = 'ctl00$cph1$txtDate$DDD$C$FNP';
+                                      dxo.adjustInnerControlsSizeOnShow = false;
+                                      dxo.popupAnimationType = 'fade';
+                                      dxo.isPopupPositionCorrectionOn = false;
+                                      dxo.shadowVisible = false;
+                                      dxo.AfterCreate();
+                                      //-->
+                                    </script>
+                                    <script id="dxss_775761801" type="text/javascript">
+                                      <!--
+                                      ASPx.AddHoverItems('ctl00_cph1_txtDate_DDD_C', [
+                                        [
+                                          ['dxeCalendarButtonHover'],
+                                          [''],
+                                          ['BT', 'BC', 'BO', 'BCN', 'FNP_BO', 'FNP_BC']
+                                        ],
+                                        [
+                                          ['dxeCalendarFastNavMonthHover'],
+                                          [''],
+                                          ['FNP_M0', 'FNP_M1', 'FNP_M2', 'FNP_M3', 'FNP_M4', 'FNP_M5', 'FNP_M6', 'FNP_M7', 'FNP_M8', 'FNP_M9', 'FNP_M10', 'FNP_M11']
+                                        ],
+                                        [
+                                          ['dxeCalendarFastNavYearHover'],
+                                          [''],
+                                          ['FNP_Y0', 'FNP_Y1', 'FNP_Y2', 'FNP_Y3', 'FNP_Y4', 'FNP_Y5', 'FNP_Y6', 'FNP_Y7', 'FNP_Y8', 'FNP_Y9']
+                                        ]
+                                      ]);
+                                      ASPx.AddPressedItems('ctl00_cph1_txtDate_DDD_C', [
+                                        [
+                                          ['dxeCalendarButtonPressed'],
+                                          [''],
+                                          ['BT', 'BC', 'BO', 'BCN', 'FNP_BO', 'FNP_BC']
+                                        ]
+                                      ]);
+                                      ASPx.AddDisabledItems('ctl00_cph1_txtDate_DDD_C', [
+                                        [
+                                          ['dxeDisabled'],
+                                          [''],
+                                          ['']
+                                        ],
+                                        [
+                                          ['dxeDisabled dxeButtonDisabled'],
+                                          [''],
+                                          ['BT', 'BC', 'BO', 'BCN', 'FNP_BO', 'FNP_BC']
+                                        ],
+                                        [
+                                          [''],
+                                          [''],
+                                          ['PYC', 'PMC', 'NMC', 'NYC'], , [
+                                            [{
+                                              'spriteCssClass': 'dxEditors_edtCalendarPrevYearDisabled'
+                                            }],
+                                            [{
+                                              'spriteCssClass': 'dxEditors_edtCalendarPrevMonthDisabled'
+                                            }],
+                                            [{
+                                              'spriteCssClass': 'dxEditors_edtCalendarNextMonthDisabled'
+                                            }],
+                                            [{
+                                              'spriteCssClass': 'dxEditors_edtCalendarNextYearDisabled'
+                                            }]
+                                          ],
+                                          ['Img']
+                                        ]
+                                      ]);
+                                      var dxo = new ASPxClientCalendar('ctl00_cph1_txtDate_DDD_C');
+                                      window['ctl00_cph1_txtDate_DDD_C'] = dxo;
+                                      dxo.uniqueID = 'ctl00$cph1$txtDate$DDD$C';
+                                      dxo.RequireStyleDecoration();
+                                      dxo.styleDecoration.AddStyle('F', 'dxeFocused', '');
+                                      dxo.serverCurrentDate = new Date(2018, 8, 29);
+                                      dxo.visibleDate = new Date(2018, 8, 29);
+                                      dxo.selection.AddArray([new Date(2018, 8, 29, 0, 0, 0, 0)]);
+                                      dxo.minDate = new Date(2018, 8, 29);
+                                      dxo.maxDate = new Date(2018, 10, 13, 23, 59, 59);
+                                      dxo.isDateEditCalendar = true;
+                                      dxo.AfterCreate();
+                                      //-->
+                                    </script>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <script id="dxss_1663008786" type="text/javascript">
+                              <!--
+                              ASPx.AddHoverItems('ctl00_cph1_txtDate_DDD', [
+                                [
+                                  ['dxpc-closeBtnHover'],
+                                  [''],
+                                  ['HCB-1']
+                                ]
+                              ]);
+                              var dxo = new ASPxClientPopupControl('ctl00_cph1_txtDate_DDD');
+                              window['ctl00_cph1_txtDate_DDD'] = dxo;
+                              dxo.uniqueID = 'ctl00$cph1$txtDate$DDD';
+                              dxo.Shown.AddHandler(function(s, e) {
+                                ASPx.DDBPCShown('ctl00_cph1_txtDate', e);
+                              });
+                              dxo.adjustInnerControlsSizeOnShow = false;
+                              dxo.popupAnimationType = 'slide';
+                              dxo.closeAction = 'CloseButton';
+                              dxo.popupHorizontalAlign = 'LeftSides';
+                              dxo.popupVerticalAlign = 'Below';
+                              dxo.isPopupPositionCorrectionOn = false;
+                              dxo.shadowVisible = false;
+                              dxo.AfterCreate();
+                              //-->
+                            </script>
+                            <script id="dxss_329574490" type="text/javascript">
+                              <!--
+                              ASPx.AddHoverItems('ctl00_cph1_txtDate', [
+                                [
+                                  ['dxeButtonEditButtonHover'],
+                                  [''],
+                                  ['B0']
+                                ]
+                              ]);
+                              ASPx.RemoveHoverItems('ctl00_cph1_txtDate', [
+                                [
+                                  ['B-100', 'B-1']
+                                ]
+                              ]);
+                              ASPx.AddPressedItems('ctl00_cph1_txtDate', [
+                                [
+                                  ['dxeButtonEditButtonPressed'],
+                                  [''],
+                                  ['B0']
+                                ]
+                              ]);
+                              ASPx.RemovePressedItems('ctl00_cph1_txtDate', [
+                                [
+                                  ['B-100', 'B-1']
+                                ]
+                              ]);
+                              ASPx.AddDisabledItems('ctl00_cph1_txtDate', [
+                                [
+                                  ['dxeDisabled'],
+                                  [''],
+                                  ['', 'I']
+                                ],
+                                [
+                                  ['dxeDisabled dxeButtonDisabled'],
+                                  [''],
+                                  ['B0'], , [
+                                    [{
+                                      'spriteCssClass': 'dxEditors_edtDropDownDisabled'
+                                    }]
+                                  ],
+                                  ['Img']
+                                ]
+                              ]);
+                              ASPx.RemoveDisabledItems('ctl00_cph1_txtDate', [
+                                [
+                                  ['B-100', 'B-1'],
+                                ]
+                              ]);
+                              document.getElementById("ctl00_cph1_txtDate_I").setAttribute("autocomplete", "off");
+                              var dxo = new ASPxClientDateEdit('ctl00_cph1_txtDate');
+                              window['ctl00_cph1_txtDate'] = dxo;
+                              dxo.autoPostBack = true;
+                              dxo.uniqueID = 'ctl00$cph1$txtDate';
+                              dxo.GotFocus.AddHandler(function(s, e) {
+                                s.ShowDropDown();
+                              });
+                              dxo.stateObject = ({
+                                'rawValue': '1538216577954.98'
+                              });
+                              dxo.RequireStyleDecoration();
+                              dxo.styleDecoration.AddStyle('F', 'dxeFocused', '');
+                              dxo.outOfRangeWarningClassName = 'dxeOutOfRWarn dxeOutOfRWarnRight';
+                              dxo.outOfRangeWarningMessages = ['The date must be in the range {0}...{1}', 'The date must be greater than or equal to {0}', 'The date must be less than or equal to {0}'];
+                              dxo.buttonCount = 1;
+                              dxo.dropDownButtonIndex = 0;
+                              dxo.date = new Date(2018, 8, 29, 10, 22, 57, 954);
+                              dxo.dateFormatter = ASPx.DateFormatter.Create('M/d/yyyy');
+                              dxo.AfterCreate();
+                              //-->
+                            </script>
+                            <span id="ctl00_cph1_vDate" style="color:Red;display:none;"> !</span>
+                          </td>
+
+                        </tr>
+                        <tr class="order-time">
+                          <td class="label"><span class="required">*</span> Requested Time:</td>
+                          <td style="white-space: nowrap;">
+                            <select name="ctl00$cph1$ddlTime" id="ctl00_cph1_ddlTime">
+        <option value="11:20 AM">11:20 AM</option>
+        <option value="11:30 AM">11:30 AM</option>
+        <option value="11:40 AM">11:40 AM</option>
+        <option value="11:50 AM">11:50 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="12:10 PM">12:10 PM</option>
+        <option value="12:20 PM">12:20 PM</option>
+        <option value="12:30 PM">12:30 PM</option>
+        <option value="12:40 PM">12:40 PM</option>
+        <option value="12:50 PM">12:50 PM</option>
+        <option value="01:00 PM">01:00 PM</option>
+        <option value="01:10 PM">01:10 PM</option>
+        <option value="01:20 PM">01:20 PM</option>
+        <option value="01:30 PM">01:30 PM</option>
+        <option value="01:40 PM">01:40 PM</option>
+        <option value="01:50 PM">01:50 PM</option>
+        <option value="02:00 PM">02:00 PM</option>
+        <option value="02:10 PM">02:10 PM</option>
+        <option value="02:20 PM">02:20 PM</option>
+        <option value="02:30 PM">02:30 PM</option>
+        <option value="02:40 PM">02:40 PM</option>
+        <option value="02:50 PM">02:50 PM</option>
+        <option value="03:00 PM">03:00 PM</option>
+        <option value="03:10 PM">03:10 PM</option>
+        <option value="03:20 PM">03:20 PM</option>
+        <option value="03:30 PM">03:30 PM</option>
+        <option value="03:40 PM">03:40 PM</option>
+        <option value="03:50 PM">03:50 PM</option>
+        <option value="04:00 PM">04:00 PM</option>
+        <option value="04:10 PM">04:10 PM</option>
+        <option value="04:20 PM">04:20 PM</option>
+        <option value="04:30 PM">04:30 PM</option>
+        <option value="04:40 PM">04:40 PM</option>
+        <option value="04:50 PM">04:50 PM</option>
+        <option value="05:00 PM">05:00 PM</option>
+        <option value="05:10 PM">05:10 PM</option>
+        <option value="05:20 PM">05:20 PM</option>
+        <option value="05:30 PM">05:30 PM</option>
+        <option value="05:40 PM">05:40 PM</option>
+        <option value="05:50 PM">05:50 PM</option>
+        <option value="06:00 PM">06:00 PM</option>
+        <option value="06:10 PM">06:10 PM</option>
+        <option value="06:20 PM">06:20 PM</option>
+        <option value="06:30 PM">06:30 PM</option>
+        <option value="06:40 PM">06:40 PM</option>
+        <option value="06:50 PM">06:50 PM</option>
+        <option value="07:00 PM">07:00 PM</option>
+        <option value="07:10 PM">07:10 PM</option>
+        <option value="07:20 PM">07:20 PM</option>
+        <option value="07:30 PM">07:30 PM</option>
+        <option value="07:40 PM">07:40 PM</option>
+        <option value="07:50 PM">07:50 PM</option>
+        <option value="08:00 PM">08:00 PM</option>
+        <option value="08:10 PM">08:10 PM</option>
+        <option value="08:20 PM">08:20 PM</option>
+        <option value="08:30 PM">08:30 PM</option>
+        <option value="08:40 PM">08:40 PM</option>
+        <option value="08:50 PM">08:50 PM</option>
+        <option value="09:00 PM">09:00 PM</option>
+        <option value="09:10 PM">09:10 PM</option>
+        <option value="09:20 PM">09:20 PM</option>
+
+    </select>
+                            <span id="ctl00_cph1_reqTime" style="color:Red;display:none;"> !</span>
+                            <span id="ctl00_cph1_vTime" style="color:Red;display:none;"> !</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>
+                            <br />
+                            <a id="ctl00_cph1_btnContinue" class="btn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$btnContinue&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Continue &gt;&gt;</a>
+
+                          </td>
+                        </tr>
+                      </table>
+
+                    </div>
+
+                    <div style="clear: both;"></div>
+                    <br />
+
+                  </div>
+                </div>
+
+                <div style="clear: both; height: 60px;"></div>
+
+              </div>
+
+            </div>
+          </div>
+          <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+          <div style="background-color: #222222; height: 217px;">
+            <div style="width: 1059px; margin: 0px auto 0px auto; position: relative;">
+              <img src="https://d1b7mian324x1s.cloudfront.net/skins/cp/eatbolay/footer2.png" width="715" height="217" alt="" usemap="#footer_map" />
+              <div class="policies" style="height: 217px; width: 220px; position: absolute; right: 0; top: 0;">
+                <div class="privacy-policy" style="text-align: center; position: relative; top: 52px;font-family: 'Roboto', sans-serif;"><a href="https://www.iubenda.com/privacy-policy/62929878" style="color: #ffffff; text-decoration: none; font-size: 14px;" target="_blank">Privacy Policy</a></div>
+                <div class="cookie-policy" style="text-align: center; position: relative; top: 72px;"><a href="https://www.iubenda.com/privacy-policy/62929878/cookie-policy" style="color: #ffffff; text-decoration: none; font-size: 14px;font-family: 'Roboto', sans-serif;" target="_blank">Cookie Policy</a></div>
+              </div>
+            </div>
+          </div>
+
+          <map name="footer_map">
+               <area shape="rect" coords="21,110,51,141" alt="instagram" href="https://www.instagram.com/eatbolay/" target="_blank" />
+               <area shape="rect" coords="55,110,86,141" alt="facebook" href="https://www.facebook.com/EatBolay/" target="_blank" />
+               <area shape="rect" coords="339,86,409,112" alt="Locations" href="https://bolay.com/locations/" />
+               <area shape="rect" coords="337,126,428,150" alt="News" href="https://bolay.com/press/" />
+               <area shape="rect" coords="338,48,384,72" alt="Menu" href="https://bolay.com/about-2/" />
+               <area shape="rect" coords="635,48,697,73" alt="Contact Us" href="https://bolay.com/contact-2/" />
+               <area shape="rect" coords="634,85,687,112" alt="Home" href="https://bolay.com/" />
+            </map>
+
+          <div class="copyright">
+            <a href="http://www.brinkpos.com" class="brink" style="float: right;"></a> Copyright 2018 Bolay and/or
+            <a href="http://www.brinksoftware.com">Brink Software Inc.</a> <br />
+            <a href="../privacy.aspx" id="ctl00_lnkPrivacy">Privacy Policy</a> |
+            <a href="../refunds.aspx" id="ctl00_lnkRefunds">Refund Policy</a> |
+            <a href="../terms.aspx" id="ctl00_lnkTerms">Terms Of Use</a>
+            <br /> Brink POS version <span id="ctl00_lblBuild">4.1.5180</span>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var Page_ValidationSummaries = new Array(document.getElementById("ctl00_cph1_vs1"));
+    var Page_Validators = new Array(document.getElementById("ctl00_cph1_reqDestination"), document.getElementById("ctl00_cph1_vDate"), document.getElementById("ctl00_cph1_reqTime"), document.getElementById("ctl00_cph1_vTime"));
+    //]]>
+  </script>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var ctl00_cph1_vs1 = document.all ? document.all["ctl00_cph1_vs1"] : document.getElementById("ctl00_cph1_vs1");
+    ctl00_cph1_vs1.headertext = "Please correct the following errors:";
+    var ctl00_cph1_reqDestination = document.all ? document.all["ctl00_cph1_reqDestination"] : document.getElementById("ctl00_cph1_reqDestination");
+    ctl00_cph1_reqDestination.controltovalidate = "ctl00_cph1_rbDestination";
+    ctl00_cph1_reqDestination.errormessage = "Please select one of the destination options.";
+    ctl00_cph1_reqDestination.display = "Dynamic";
+    ctl00_cph1_reqDestination.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    ctl00_cph1_reqDestination.initialvalue = "";
+    var ctl00_cph1_vDate = document.all ? document.all["ctl00_cph1_vDate"] : document.getElementById("ctl00_cph1_vDate");
+    ctl00_cph1_vDate.controltovalidate = "ctl00_cph1_txtDate";
+    ctl00_cph1_vDate.errormessage = "The selected date is invalid.";
+    ctl00_cph1_vDate.display = "Dynamic";
+    ctl00_cph1_vDate.evaluationfunction = "CustomValidatorEvaluateIsValid";
+    var ctl00_cph1_reqTime = document.all ? document.all["ctl00_cph1_reqTime"] : document.getElementById("ctl00_cph1_reqTime");
+    ctl00_cph1_reqTime.controltovalidate = "ctl00_cph1_ddlTime";
+    ctl00_cph1_reqTime.errormessage = "Please select a requested time.";
+    ctl00_cph1_reqTime.display = "Dynamic";
+    ctl00_cph1_reqTime.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    ctl00_cph1_reqTime.initialvalue = "";
+    var ctl00_cph1_vTime = document.all ? document.all["ctl00_cph1_vTime"] : document.getElementById("ctl00_cph1_vTime");
+    ctl00_cph1_vTime.controltovalidate = "ctl00_cph1_ddlTime";
+    ctl00_cph1_vTime.errormessage = "There are no times available on the selected date.";
+    ctl00_cph1_vTime.display = "Dynamic";
+    ctl00_cph1_vTime.evaluationfunction = "CustomValidatorEvaluateIsValid";
+    //]]>
+  </script>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    (function(id) {
+      var e = document.getElementById(id);
+      if (e) {
+        e.dispose = function() {
+          Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+      }
+    })('ctl00_cph1_vs1');
+    var Page_ValidationActive = false;
+    if (typeof(ValidatorOnLoad) == "function") {
+      ValidatorOnLoad();
+    }
+
+    function ValidatorOnSubmit() {
+      if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+      } else {
+        return true;
+      }
+    }
+    document.getElementById('ctl00_cph1_reqDestination').dispose = function() {
+      Array.remove(Page_Validators, document.getElementById('ctl00_cph1_reqDestination'));
+    }
+    document.getElementById('ctl00_cph1_vDate').dispose = function() {
+      Array.remove(Page_Validators, document.getElementById('ctl00_cph1_vDate'));
+    }
+    document.getElementById('ctl00_cph1_reqTime').dispose = function() {
+      Array.remove(Page_Validators, document.getElementById('ctl00_cph1_reqTime'));
+    }
+    document.getElementById('ctl00_cph1_vTime').dispose = function() {
+      Array.remove(Page_Validators, document.getElementById('ctl00_cph1_vTime'));
+    }
+    //]]>
+  </script>
+  </form>
+
+</body>
+
+</html>
