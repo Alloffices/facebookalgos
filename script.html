@@ -42,6 +42,7 @@
     // Empty array that will have all of the selected products
     let pushMyOrder = [];
     let pushMyOrderCheckout = [];
+    let pushTotal Price = [];
 
     // order/datetime.aspx searches for Location through zipcode
     // order/datetime.aspx searches for Location through zipcode
@@ -146,16 +147,17 @@
     // Suggest.aspx | Checkout suggestion code - gets the products and value before checkout
     // Suggest.aspx | Checkout suggestion code - gets the products and value before checkout
     // Suggest.aspx | Checkout suggestion code - gets the products and value before checkout
-
     function myOrderSuggestion() {
       for (var s=0;s<myOrder.length;s++) {
         var myOrderCheckout = $('.order-list-container > div:contains("'+myOrder[s]+'")').length > 0;
         console.log(myOrderCheckout);
         if (myOrderCheckout) {
           pushMyOrderCheckout.push(myOrder[s]);
-          alert(myOrder[s]);
         };
       };
+
+
+      // Shows order in array in console (Check Browser Console)
       console.log(pushMyOrderCheckout);
 
       fbq('track', 'ViewContent', { 
@@ -165,12 +167,17 @@
       });
     };
 
+    $('div#ctl00_cph1_orderList_pnlOrder td:last').click(function() {
+      let numbersNum = $(''+this+'b').html();
+      alert(numbersNum);
+    });
+
     if(window.location.href.indexOf("suggest.html") > -1) {    
       // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
-      $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
-        myOrderSuggestion();
-        alert('Completed!');
-      });
+      // $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
+      //   myOrderSuggestion();
+      //   alert('Completed!');
+      // });
     };
   });
 </script>
