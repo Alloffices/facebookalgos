@@ -2,9 +2,12 @@
 <!--  Facebook  Pixel  Code  --> <script>      !function(f,b,e,v,n,t,s)     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?    n.callMethod.apply(n,arguments):n.queue.push(arguments)};    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';    n.queue=[];t=b.createElement(e);t.async=!0;    t.src=v;s=b.getElementsByTagName(e)[0];    s.parentNode.insertBefore(t,s)}(window, document,'script',      'https://connect.facebook.net/en_US/fbevents.js');      fbq('init',  '1737034453224224');      fbq('track',  'PageView');  </script>  <noscript><img  height="1"  width="1"  style="display:none"      src="https://www.facebook.com/tr?id=1737034453224224&ev=PageView&noscript=1"  /></noscript>  <!--  End  Facebook  Pixel  Code  -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script type="text/javascript">
   $(document).ready(function() {
-    // Add lcoation zip codes here
+    // Arrays of data points
+    // Arrays of data points
+    // Arrays of data points
     let zips = [
                 '32608', 
                 '32832',
@@ -14,6 +17,36 @@
                 '33414',
                 '33409'
     ];
+    let myOrder = [
+                'Small Bol',
+                'Kids Bol',
+                'Thai Bol (Large Bol)',
+                'Vegan Bol (Small Bol)', 
+                'Baja Bol (Small Bol)',
+                'Surf & Turf (Large Bol)',
+                'Bottled Water',
+                'Large Bol',
+                'Craft Soda',
+                'Infused Tea',
+                'Island Time- Orange Strawberry',
+                'San Pellegrino Sparkling Water',
+                'Sweet South- Lemonade',
+                'Berry Gold',
+                'Gatsby',
+                'Hawaiian Healer',
+                'Immunity Spark Shot',
+                'Sweet Melons',
+                'Chocolate Chunk Gluten Free Cookie',
+                'Snicker Doodle Cookie'
+    ];    
+    // Empty array that will have all of the selected products
+    let pushMyOrder = [];
+    let pushMyOrderCheckout = [];
+
+    // order/datetime.aspx searches for Location through zipcode
+    // order/datetime.aspx searches for Location through zipcode
+    // order/datetime.aspx searches for Location through zipcode
+    // order/datetime.aspx searches for Location through zipcode
     function findSomething() {
       for (var i=0; i<zips.length;i++) {
         if (zips[i]) {
@@ -78,38 +111,16 @@
       }
     }
     // Checks slug to contain = order/datetime.aspx?
-    if(window.location.href.indexOf("quizzical-wright-fdc08d.netlify.com") > -1) {
+    if(window.location.href.indexOf("quizzical-wright-fdc08d.netlify.com/datetime.html") > -1) {
       // Executes the main function to search location zips and locations
       findSomething();
-    }
+    };
 
 
     // order/menu.aspx products that will be searched for under (MY PRODUCTS)
-    let myOrder = [
-                'Small Bol',
-                'Kids Bol',
-                'Thai Bol (Large Bol)',
-                'Vegan Bol (Small Bol)', 
-                'Baja Bol (Small Bol)',
-                'Surf & Turf (Large Bol)',
-                'Bottled Water',
-                'Large Bol',
-                'Craft Soda',
-                'Infused Tea',
-                'Island Time- Orange Strawberry',
-                'San Pellegrino Sparkling Water',
-                'Sweet South- Lemonade',
-                'Berry Gold',
-                'Gatsby',
-                'Hawaiian Healer',
-                'Immunity Spark Shot',
-                'Sweet Melons',
-                'Chocolate Chunk Gluten Free Cookie',
-                'Snicker Doodle Cookie'
-    ];    
-    // Empty array that will have all of the selected products
-    let pushMyOrder = [];
-
+    // order/menu.aspx products that will be searched for under (MY PRODUCTS)
+    // order/menu.aspx products that will be searched for under (MY PRODUCTS)
+    // order/menu.aspx products that will be searched for under (MY PRODUCTS)
     // Function that will check which products have been selected
     function myOrderMenu() {
       for (var j=0;j<myOrder.length;j++) {
@@ -121,10 +132,47 @@
         }       
       }
       console.log(pushMyOrder);
+
       fbq('trackCustom',  'Menu', {
         content_name: [pushMyOrder]
       });
     }
-    myOrderMenu();
+    if(window.location.href.indexOf("menu.html") > -1) {    
+      // Executes the main function to search location zips and locations
+      myOrderMenu();
+    };
+
+
+    // Suggest.aspx | Checkout suggestion code - gets the products and value before checkout
+    // Suggest.aspx | Checkout suggestion code - gets the products and value before checkout
+    // Suggest.aspx | Checkout suggestion code - gets the products and value before checkout
+
+    function myOrderSuggestion() {
+      for (var s=0;s<myOrder.length;s++) {
+        var myOrderCheckout = $('.order-list-container > div:contains("'+myOrder[s]+'")').length > 0;
+        console.log(myOrderCheckout);
+        if (myOrderCheckout) {
+          pushMyOrderCheckout.push(myOrder[s]);
+          alert(myOrder[s]);
+        };
+      };
+      console.log(pushMyOrderCheckout);
+
+      fbq('track', 'ViewContent', { 
+        value: 0.10,
+        currency: 'USD',
+        content_name: [pushMyOrderCheckout]
+      });
+    };
+
+    // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
+    $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
+      myOrderSuggestion();
+      alert('Completed!');
+    })
   });
 </script>
+
+</form>
+</body>
+</html>
