@@ -2770,14 +2770,12 @@ Sys.Application.add_init(function() {
 				if (myOrderList) {
 					pushMyOrder.push(myOrder[j]);
 					alert(myOrder[j]);
-					// if (myOrderList === myOrderList) {
-					// 	alert(myOrder[j]);
-					// } else {
-					// 	console.log('It is not here!');
-					// }
 				}    		
     	}
     	console.log(pushMyOrder);
+    	fbq('track',  'Menu', {
+    		content_name: [pushMyOrder]
+    	});
     }
 		myOrderMenu();
   });
