@@ -165,14 +165,12 @@
       });
     };
 
-    // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
-    $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
-      myOrderSuggestion();
-      alert('Completed!');
-    })
+    if(window.location.href.indexOf("suggest.html") > -1) {    
+      // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
+      $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
+        myOrderSuggestion();
+        alert('Completed!');
+      });
+    };
   });
 </script>
-
-</form>
-</body>
-</html>
