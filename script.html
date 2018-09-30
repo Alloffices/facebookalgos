@@ -42,7 +42,7 @@
     // Empty array that will have all of the selected products
     let pushMyOrder = [];
     let pushMyOrderCheckout = [];
-    let pushTotal Price = [];
+    let pushTotalPrice = [];
 
     // order/datetime.aspx searches for Location through zipcode
     // order/datetime.aspx searches for Location through zipcode
@@ -135,7 +135,7 @@
       console.log(pushMyOrder);
 
       fbq('trackCustom',  'Menu', {
-        content_name: [pushMyOrder]
+        content_name: pushMyOrder
       });
     }
     if(window.location.href.indexOf("menu.html") > -1) {    
@@ -156,28 +156,27 @@
         };
       };
 
-
+      // Find the value of the total price of the order
+      let numbersNum = $('div#ctl00_cph1_orderList_pnlOrder td:last b').html();
+      pushTotalPrice.push(numbersNum);
+      
+      console.log(pushTotalPrice)
       // Shows order in array in console (Check Browser Console)
       console.log(pushMyOrderCheckout);
 
-      fbq('track', 'ViewContent', { 
-        value: 0.10,
+      fbq('track', 'ViewContent', {
+        value: pushTotalPrice,
         currency: 'USD',
-        content_name: [pushMyOrderCheckout]
+        content_name: pushMyOrderCheckout
       });
     };
 
-    $('div#ctl00_cph1_orderList_pnlOrder td:last').click(function() {
-      let numbersNum = $(''+this+'b').html();
-      alert(numbersNum);
-    });
-
     if(window.location.href.indexOf("suggest.html") > -1) {    
       // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
-      // $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
-      //   myOrderSuggestion();
-      //   alert('Completed!');
-      // });
+      $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
+        myOrderSuggestion();
+        alert('Completed!');
+      });
     };
   });
 </script>

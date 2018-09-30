@@ -834,6 +834,7 @@ Sys.Application.add_init(function() {
 </script>
 
 
+
 <!--  Facebook  Pixel  Code  --> <script>      !function(f,b,e,v,n,t,s)     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?    n.callMethod.apply(n,arguments):n.queue.push(arguments)};    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';    n.queue=[];t=b.createElement(e);t.async=!0;    t.src=v;s=b.getElementsByTagName(e)[0];    s.parentNode.insertBefore(t,s)}(window, document,'script',      'https://connect.facebook.net/en_US/fbevents.js');      fbq('init',  '1737034453224224');      fbq('track',  'PageView');  </script>  <noscript><img  height="1"  width="1"  style="display:none"      src="https://www.facebook.com/tr?id=1737034453224224&ev=PageView&noscript=1"  /></noscript>  <!--  End  Facebook  Pixel  Code  -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -877,7 +878,7 @@ Sys.Application.add_init(function() {
     // Empty array that will have all of the selected products
     let pushMyOrder = [];
     let pushMyOrderCheckout = [];
-    let pushTotal Price = [];
+    let pushTotalPrice = [];
 
     // order/datetime.aspx searches for Location through zipcode
     // order/datetime.aspx searches for Location through zipcode
@@ -970,7 +971,7 @@ Sys.Application.add_init(function() {
       console.log(pushMyOrder);
 
       fbq('trackCustom',  'Menu', {
-        content_name: [pushMyOrder]
+        content_name: pushMyOrder
       });
     }
     if(window.location.href.indexOf("menu.html") > -1) {    
@@ -991,32 +992,30 @@ Sys.Application.add_init(function() {
         };
       };
 
-
+      // Find the value of the total price of the order
+      let numbersNum = $('div#ctl00_cph1_orderList_pnlOrder td:last b').html();
+      pushTotalPrice.push(numbersNum);
+      
+      console.log(pushTotalPrice)
       // Shows order in array in console (Check Browser Console)
       console.log(pushMyOrderCheckout);
 
-      fbq('track', 'ViewContent', { 
-        value: 0.10,
+      fbq('track', 'ViewContent', {
+        value: pushTotalPrice,
         currency: 'USD',
-        content_name: [pushMyOrderCheckout]
+        content_name: pushMyOrderCheckout
       });
     };
 
-    $('div#ctl00_cph1_orderList_pnlOrder td:last').click(function() {
-    	let numbersNum = $(''+this+'b').html();
-      alert(numbersNum);
-    });
-
     if(window.location.href.indexOf("suggest.html") > -1) {    
       // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
-      // $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
-      //   myOrderSuggestion();
-      //   alert('Completed!');
-      // });
+      $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
+        myOrderSuggestion();
+        alert('Completed!');
+      });
     };
   });
 </script>
-
 
 </form>
 </body>
