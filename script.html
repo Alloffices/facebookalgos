@@ -1,4 +1,5 @@
-<!--  Facebook  Pixel  Code  -->  <script>      !function(f,b,e,v,n,t,s)     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?    n.callMethod.apply(n,arguments):n.queue.push(arguments)};    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';    n.queue=[];t=b.createElement(e);t.async=!0;    t.src=v;s=b.getElementsByTagName(e)[0];    s.parentNode.insertBefore(t,s)}(window, document,'script',      'https://connect.facebook.net/en_US/fbevents.js');      fbq('init',  '1737034453224224');      fbq('track',  'PageView');  </script>  <noscript><img  height="1"  width="1"  style="display:none"      src="https://www.facebook.com/tr?id=1737034453224224&ev=PageView&noscript=1"  /></noscript>  <!--  End  Facebook  Pixel  Code  -->
+
+<!--  Facebook  Pixel  Code  --> <script>      !function(f,b,e,v,n,t,s)     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?    n.callMethod.apply(n,arguments):n.queue.push(arguments)};    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';    n.queue=[];t=b.createElement(e);t.async=!0;    t.src=v;s=b.getElementsByTagName(e)[0];    s.parentNode.insertBefore(t,s)}(window, document,'script',      'https://connect.facebook.net/en_US/fbevents.js');      fbq('init',  '1737034453224224');      fbq('track',  'PageView');  </script>  <noscript><img  height="1"  width="1"  style="display:none"      src="https://www.facebook.com/tr?id=1737034453224224&ev=PageView&noscript=1"  /></noscript>  <!--  End  Facebook  Pixel  Code  -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -83,12 +84,47 @@
     }
 
 
-    
-    fbq('track',  'Menu',  {      });  
+    // order/menu.aspx products that will be searched for under (MY PRODUCTS)
+    let myOrder = [
+                'Small Bol',
+                'Kids Bol',
+                'Thai Bol (Large Bol)',
+                'Vegan Bol (Small Bol)', 
+                'Baja Bol (Small Bol)',
+                'Surf & Turf (Large Bol)',
+                'Bottled Water',
+                'Large Bol',
+                'Craft Soda',
+                'Infused Tea',
+                'Island Time- Orange Strawberry',
+                'San Pellegrino Sparkling Water',
+                'Sweet South- Lemonade',
+                'Berry Gold',
+                'Gatsby',
+                'Hawaiian Healer',
+                'Immunity Spark Shot',
+                'Sweet Melons',
+                'Chocolate Chunk Gluten Free Cookie',
+                'Snicker Doodle Cookie'
+    ];    
+    // Empty array that will have all of the selected products
+    let pushMyOrder = [];
 
-
-
-
-
+    // Function that will check which products have been selected
+    function myOrderMenu() {
+      for (var j=0;j<myOrder.length;j++) {
+        var myOrderList = $('.order-list-container > div:contains("'+myOrder[j]+'")').length > 0;
+        console.log(myOrderList);
+        if (myOrderList) {
+          pushMyOrder.push(myOrder[j]);
+          alert(myOrder[j]);
+        }       
+      }
+      console.log(pushMyOrder);
+      fbq('trackCustom',  'Menu', {
+        content_name: [pushMyOrder]
+      });
+    }
+    myOrderMenu();
   });
 </script>
