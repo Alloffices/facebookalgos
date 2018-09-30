@@ -2740,6 +2740,7 @@ Sys.Application.add_init(function() {
     if(window.location.href.indexOf("datetime.html") > -1) {
       // Executes the main function to search location zips and locations
       findSomething();
+      break;
     } else {
     	alert('Did not fire');
     };
@@ -2793,10 +2794,9 @@ Sys.Application.add_init(function() {
 		if(window.location.href.indexOf("menu.html") > -1) {    
       // Executes the main function to search location zips and locations
 			myOrderMenu();
+		} else {
+			alert('Did not fire');
 		};
-
-
-
   });
 </script>
 </body>
