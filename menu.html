@@ -2730,7 +2730,7 @@ Sys.Application.add_init(function() {
       }
     }
     // Checks slug to contain = order/datetime.aspx?
-    if(window.location.href.indexOf("quizzical-wright-fdc08d.netlify.com") > -1) {
+    if(window.location.href.indexOf("datetime.html") > -1) {
       // Executes the main function to search location zips and locations
       findSomething();
     }
@@ -2773,11 +2773,15 @@ Sys.Application.add_init(function() {
 				}    		
     	}
     	console.log(pushMyOrder);
+    	
     	fbq('trackCustom',  'Menu', {
     		content_name: [pushMyOrder]
     	});
     }
-		myOrderMenu();
+		if(window.location.href.indexOf("menu.html") > -1) {    
+      // Executes the main function to search location zips and locations
+			myOrderMenu();
+		};
   });
 </script>
 </body>
