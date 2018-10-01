@@ -974,7 +974,7 @@ Sys.Application.add_init(function() {
         content_name: pushMyOrder
       });
     }
-    if(window.location.href.indexOf("menu.html") > -1) {    
+    if(window.location.href.indexOf("quizzical-wright-fdc08d.netlify.com/menu.html") > -1) {    
       // Executes the main function to search location zips and locations
       myOrderMenu();
     };
@@ -994,20 +994,22 @@ Sys.Application.add_init(function() {
 
       // Find the value of the total price of the order
       let numbersNum = $('div#ctl00_cph1_orderList_pnlOrder td:last b').html();
-      pushTotalPrice.push(numbersNum);
+      var removeDollarSign = numbersNum.replace('$','');
+      // alert(removeDollarSign);
+      pushTotalPrice.push(removeDollarSign);
       
       console.log(pushTotalPrice)
       // Shows order in array in console (Check Browser Console)
       console.log(pushMyOrderCheckout);
 
       fbq('track', 'AddToCart', {
-        value: pushTotalPrice,
+        value: removeDollarSign,
         currency: 'USD',
         content_name: pushMyOrderCheckout
       });
     };
 
-    if(window.location.href.indexOf("suggest.html") > -1) {    
+    if(window.location.href.indexOf("quizzical-wright-fdc08d.netlify.com/suggest.html") > -1) {    
       // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
       $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
         myOrderSuggestion();
