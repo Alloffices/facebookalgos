@@ -191,7 +191,7 @@ $(document).ready(function() {
     });
   }
 
-  if(window.location.href.indexOf("Submit-Order-Bolay-1") > -1) {    
+  if(window.location.href.indexOf("Submit-Order-Bolay-1.html") > -1) {    
     // This will track the exact price that the customer is checking out
     alert("Submit-Order-Page-Bolay!");
 
@@ -204,7 +204,6 @@ $(document).ready(function() {
 
   // Order-submitted-bolay.aspx | thank you page
   if(window.location.href.indexOf("Order-Submitted-Bolay-2.html") > -1) {
-    g
   }
 });
 
