@@ -109,7 +109,7 @@ $(document).ready(function() {
     }
   }
   // Checks slug to contain = order/datetime.aspx?
-  if(window.location.href.indexOf("quizzical-wright-fdc08d.netlify.com/datetime.html") > -1) {
+  if(window.location.href.indexOf("order/datetime.aspx") > -1) {
     // Executes the main function to search location zips and locations
     findSomething();
   };
@@ -135,7 +135,7 @@ $(document).ready(function() {
       content_name: pushMyOrder
     });
   }
-  if(window.location.href.indexOf("menu.html") > -1) {    
+  if(window.location.href.indexOf("order/menu.aspx") > -1) {    
     // Executes the main function to search location zips and locations
     myOrderMenu();
   };
@@ -168,7 +168,7 @@ $(document).ready(function() {
     });
   };
 
-  if(window.location.href.indexOf("suggest.html") > -1) {    
+  if(window.location.href.indexOf("order/suggest.aspx") > -1) {    
     // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
     $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
       myOrderSuggestion();
@@ -191,7 +191,7 @@ $(document).ready(function() {
     });
   }
 
-  if(window.location.href.indexOf("Submit-Order-Bolay-1.html") > -1) {    
+  if(window.location.href.indexOf("order/submit.aspx") > -1) {    
     // This will track the exact price that the customer is checking out
     alert("Submit-Order-Page-Bolay!");
 
@@ -203,7 +203,17 @@ $(document).ready(function() {
 
 
   // Order-submitted-bolay.aspx | thank you page
-  if(window.location.href.indexOf("Order-Submitted-Bolay-2.html") > -1) {
+  // Order-submitted-bolay.aspx | thank you page
+  // Order-submitted-bolay.aspx | thank you page
+  if(window.location.href.indexOf("order/done.aspx") > -1) {
+    alert('Not Tracking Code Here!')
+  }
+
+  // Cancel-Order-bolay.aspx | Cancel Order
+  // Cancel-Order-bolay.aspx | Cancel Order
+  // Cancel-Order-bolay.aspx | Cancel Order
+  if(window.location.href.indexOf("order/cancel") > -1) {
+    alert('Not Tracking Code Here!')
   }
 });
 
