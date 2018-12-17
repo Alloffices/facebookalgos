@@ -185,7 +185,7 @@ $(document).ready(function() {
     pushSubmitOrder.push(submitPrice);
 
     // Will send purchase order to Facebook
-    fbq('track', 'InitiateCheckout', {
+    fbq('track', 'Purchase', {
       value: pushSubmitOrder,
       currency: 'USD',
     });
