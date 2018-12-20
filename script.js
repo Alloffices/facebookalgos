@@ -1,4 +1,4 @@
-
+<script>
 
 $(document).ready(function() {
   // Arrays of data points
@@ -54,43 +54,43 @@ $(document).ready(function() {
           // Will switch between each zips[i] condition to check which one is true
           switch (zips[i]) {
             case '33496':
-              alert('Boca Raton');
+              console.log('Boca Raton');
               fbq('track',  'ViewContent',  {
                 content_name:  'Boca Raton',}
               ); 
               break;
             case '32608':
-              alert('Gainesville');
+              console.log('Gainesville');
               fbq('track',  'ViewContent',  {
                 content_name:  'Gainesville'}
               ); 
               break;
             case '32832':
-              alert('Lake Nona');
+              console.log('Lake Nona');
               fbq('track',  'ViewContent',  {
                 content_name:  'Lake Nona'}
               ); 
               break;
             case '33403':
-              alert('Northlake/PGA');
+              console.log('Northlake/PGA');
               fbq('track',  'ViewContent',  {
                 content_name:  'Northlake/PGA'}
               ); 
               break;
             case '33026':
-              alert('Pembroke Pines');
+              console.log('Pembroke Pines');
               fbq('track',  'ViewContent',  {
                 content_name:  'Pembroke Pines'}
               ); 
               break;
             case '33414':
-              alert('Wellington');
+              console.log('Wellington');
               fbq('track',  'ViewContent',  {
                 content_name:  'Wellington'}
               ); 
               break;
             case '33409':
-              alert('West Palm Beach');
+              console.log('West Palm Beach');
               fbq('track',  'ViewContent',  {
                 content_name:  'West Palm Beach'}
               ); 
@@ -98,13 +98,13 @@ $(document).ready(function() {
             default:
               console.log('The location you are looking for is not in our system');
           }
-          alert("Is there anything else you'd like?");
+          console.log("Is there anything else you'd like?");
           // Once a valid zip code is found we break
           break;
         };
       } else {
         // Will alert that the page does not contain company zipcodes
-        alert("Zipcode Does Not Exist - Is there anything else you'd like?");
+        console.log("Zipcode Does Not Exist - Is there anything else you'd like?");
       }
     }
   }
@@ -126,7 +126,7 @@ $(document).ready(function() {
       console.log(myOrderList);
       if (myOrderList) {
         pushMyOrder.push(myOrder[j]);
-        alert(myOrder[j]);
+        console.log(myOrder[j]);
       }       
     }
     console.log(pushMyOrder);
@@ -172,7 +172,7 @@ $(document).ready(function() {
     // When Complete Order button is clicked - myOrderSuggestion function fires pixel code and adds data to pixel
     $('#ctl00_cph1_orderList_upnlOrderList').click(function() {
       myOrderSuggestion();
-      alert('Completed!');
+      console.log('Completed!');
     });
   };
 
@@ -193,11 +193,11 @@ $(document).ready(function() {
 
   if(window.location.href.indexOf("order/submit.aspx") > -1) {    
     // This will track the exact price that the customer is checking out
-    alert("Submit-Order-Page-Bolay!");
+    console.log("Submit-Order-Page-Bolay!");
 
     $('a#ctl00_cph1_btnSubmit').click(function() {
       subnmitCardOrder();
-      alert("Completed Total = " + pushSubmitOrder);
+      console.log("Completed Total = " + pushSubmitOrder);
     });      
   }
 
@@ -206,14 +206,16 @@ $(document).ready(function() {
   // Order-submitted-bolay.aspx | thank you page
   // Order-submitted-bolay.aspx | thank you page
   if(window.location.href.indexOf("order/done.aspx") > -1) {
-    alert('Not Tracking Code Here!')
+    console.log('Not Tracking Code Here!')
   }
 
   // Cancel-Order-bolay.aspx | Cancel Order
   // Cancel-Order-bolay.aspx | Cancel Order
   // Cancel-Order-bolay.aspx | Cancel Order
   if(window.location.href.indexOf("order/cancel") > -1) {
-    alert('Not Tracking Code Here!')
+    console.log('Not Tracking Code Here!')
   }
 });
 
+
+</script>
