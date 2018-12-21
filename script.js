@@ -1,6 +1,7 @@
 <script>
 
-$(document).ready(function() {
+
+$(window).on('load', function() {
   // Arrays of data points
   // Arrays of data points
   // Arrays of data points
